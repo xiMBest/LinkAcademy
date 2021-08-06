@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html leng="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Componants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button id="active-button"><p class="p3">Button</p></button>
+    <button id="disable-button" disabled><p class="p3">Button</p></button>
+
+    <input type="text" name="active" placeholder="Normal">
+    <input type="text" name="disabled" placeholder="Normal">
+
+    <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn"><p class="">Select</p></button>
+        <svg class="feather">
+            <use xlink:href="arrow-left"/>
+        </svg>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">First</a>
+          <a href="#about">Second</a>
+          <a href="#contact">Third</a>
+        </div>
+      </div>
+
+<script>
+
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+</script>
+</body>
+</html>
