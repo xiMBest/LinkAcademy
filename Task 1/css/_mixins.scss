@@ -1,0 +1,11 @@
+@mixin header-link ($opacity) {
+    &:hover {
+        opacity: $opacity;
+    }
+    &:focus {
+        opacity: $opacity;
+    }
+    &:active {
+        opacity: $opacity;
+    }
+}

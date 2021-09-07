@@ -1,0 +1,636 @@
+@import 'variables';
+@import 'mixins';
+
+@font-face {
+    font-family: 'Saudagar';
+    src: url(../fonts/Saudagar.ttf);
+}
+
+@font-face {
+    font-family: 'Sukhumvit Set';
+    src: url(../fonts/sukhumvit-set.ttf);
+}
+
+@font-face {
+    font-family: 'Sukhumvit Set';
+    src: url(../fonts/sukhumvit-set.ttf);
+}
+
+
+*{
+    margin: 0;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.apple-icon {
+    display: flex;
+    background: url(../images/apple.svg);
+    background-repeat: no-repeat;
+}
+
+.google-icon {
+    display: flex;
+    background: url(../images/google-play.svg);
+    background-repeat: no-repeat;
+}
+
+.content-center {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    border:none;
+}
+
+/* Header styles start */
+
+.header {
+    width: 100%;
+    position: absolute;
+    background-color: none;
+    margin-top: 80px;
+}
+
+
+.wrapper {
+    max-width: 1690px;
+    margin: 0 auto;
+}
+
+.header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-item {
+    margin-right: 63px;
+    list-style-type: none;
+}
+.header-item:last-child {
+    margin: 0;
+}
+
+.header-link {
+    font-family: Sukhumvit Set;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: $secondary-color;
+    text-decoration: none;
+    padding-left: 30px;
+    @include header-link ($sixth-level-opacity)
+}
+
+/* Header styles End */
+
+/* Intro styles Start */
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: url(../images/main-image.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+
+.main-heading {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13rem;
+    line-height: 60%;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 40px;
+}
+
+.intro-text {
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: $secondary-color;
+    margin-bottom: 70px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-primary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 172%;
+
+
+    border-radius: 2px;
+    background: $primary-color;
+    color: $third-color;
+}
+
+.button-intro {
+    width: 282px;
+    height: 59px;
+}
+
+/* Intro styles End */
+
+/* Comming soon Start */
+.comming-soon-page {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    background: $third-color;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+
+.comming-soon-heading {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13rem;
+    line-height: 90%;
+    color: $secondary-color;
+    opacity: 0.06;
+    text-transform: uppercase;
+    margin-bottom: 211px;
+    width: 100%;
+}
+
+.comming-soon-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-bottom: 100px;
+}
+
+.comming-soon-heading2 {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    max-width: 800px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color:$secondary-color;
+    margin-bottom: 46px;
+}
+
+.comming-soon-text {
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.37rem;
+    line-height: 172%;
+    max-width: 810px;
+    font-weight: 400;
+    color:$secondary-color;
+    opacity: 0.8;
+}
+
+.comming-soon-image {
+    width: 1520px;
+    height: 760px;
+    position: relative;
+    transform: translateY(-100px);
+    background: url(../images/comming-soon.jpg);
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin-bottom: 300px;
+}
+/* Comming soon End */
+
+
+
+/* Schedule Start */
+
+
+.cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 1320px;
+    margin-bottom: 245px;
+}
+
+
+.card-schedule-image {
+    background: url(../images/schedule-image.jpg);
+    background-repeat: no-repeat;
+    width: 600px;
+    height: 330px;
+}
+
+.card-primary-text {
+    max-width: 580px;
+    height: 330px;
+    margin-bottom: 100px;
+}
+
+.schedule-heading {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 150%;
+    color: $primary-color;
+}
+
+.schedule-title {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 47px;
+}
+.schedule-text {
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 172%;
+}
+
+
+/* Schedule End */
+
+/* Money page Start */
+
+.bg-money {
+    background:$third-color;
+    width: 100%; 
+    height: 690px; 
+    display: flex; 
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 285px;
+}
+
+.cards-money {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1320px;
+    margin-bottom: 245px;
+}
+.card-money-text {
+    max-width: 484px;
+    height: 318px;
+    height: 600px;
+}
+
+.money-heading {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 150%;
+    color: $primary-color;
+}
+.money-title {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 47px;
+    max-width: 390px;
+    color: $secondary-color;
+}
+.money-text {
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 172%;
+    max-width: 484px;
+    color: $secondary-color;
+}
+
+.card-money-image {
+    background: url(../images/money-image.jpg);
+    background-repeat: no-repeat;
+    width: 580px;
+    height: 1030px;
+    transform: translateY(-80px);
+}
+/* Money page End*/
+
+/* Skills personal start*/
+
+.cards-skills {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 1520px;
+    margin-bottom: 245px;
+}
+
+.skills-heading {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 150%;
+    color: $primary-color;
+}
+
+.skills-title {
+    font-family: 'Saudagar';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 130%;
+    text-transform: uppercase;
+    max-width: 390px;
+    margin-bottom: 47px;
+}
+.skills-text {
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 172%;
+    max-width: 450px;
+}
+/* Skills personal End */
+
+
+
+/* Circles Start */
+
+.circles-wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 200px;
+}
+
+.circle {
+    width: 541px;
+    height: 541px;
+    border-radius: 270.5px;
+    background: $primary-color;
+}
+
+.circle-slice {
+    width: 541px;
+    height: 541px;
+    background: url(../images/circle-slice.jpg);
+    background-repeat: no-repeat;
+}
+
+
+.phone {
+    position: absolute;
+    transform: translateY(-100px);
+    width: 362px;
+    height: 756px;
+    background: url(../images/Phone1.jpg);
+}
+
+.install-buttons {
+    display: block;
+}
+
+.comming-soon-app {
+    display: flex;
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 25px;
+    line-height: 130%;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.link-app {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 200px;
+}
+
+.text-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+    
+    width: 182px;
+    height: 52px;
+    background-color: black;
+
+    margin-right: 20px;
+}
+
+.icon-button {
+    margin-right: 10px;
+}
+
+
+
+.play-market {
+    width: 182px;
+    height: 52px;
+    background: black;
+}
+
+
+/* Circles End */
+
+
+/* Info Blank Start */
+
+
+.container-sub {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+
+.info-blank1 {
+    width: 50%;
+    height: 100vh;
+    background: url(../images/sub-image.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.info-blank2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: $third-color;
+}
+
+.sub {
+    width: 560px;
+    height: 840px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sub-text {
+    font-family: Saudagar;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 130%;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.button-sub {
+    width: 560px;
+    height: 59px;
+}
+
+.input-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: none;
+}
+
+.input-field {
+    width: 560px;
+    height: 59px;
+    margin: 20px;
+    background: none;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 165%;
+    text-transform: uppercase;
+    color: #8E8E8E;
+}
+
+.input-field::placeholder {
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 165%;
+    text-transform: uppercase;
+    color: #8E8E8E;
+}
+
+.drop-down {
+    width: 560px;
+    height: 59px;
+    border-bottom: 1px solid $secondary-color;
+    margin: 20px;
+}
+.drop-down-text {
+    display: flex;
+    justify-content: space-between;
+
+
+    padding-top: 14px;
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 165%;
+    text-transform: uppercase;
+    color: #8E8E8E;
+}
+
+/* Info Blank End */
+
+/* Footer Start */
+
+.footer-container {
+    width: 100%;
+    height: 110px;
+    background: $third-color;
+}
+
+.footer-text {
+    font-family: 'Sukhumvit Set';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 165%;
+    text-align: center;
+    color: #FFFFFF;
+
+
+}
+
+.footer-space {
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 70px;
+    padding-left: 70px;
+    padding: 41px;
+}
+
+/* Footer End */
