@@ -1,24 +1,15 @@
 @import 'variables';
 @import 'mixins';
-
-@font-face {
-    font-family: 'Saudagar';
-    src: url(../fonts/Saudagar.ttf);
-}
-
-@font-face {
-    font-family: 'Sukhumvit Set';
-    src: url(../fonts/sukhumvit-set.ttf);
-}
-
-@font-face {
-    font-family: 'Sukhumvit Set';
-    src: url(../fonts/sukhumvit-set.ttf);
-}
+@import 'fonts';
 
 
 *{
-    margin: 0;
+    margin: 0px;
+}
+
+body, html {
+    height: 100%;
+    width: 100%; 
 }
 
 html {
@@ -44,25 +35,31 @@ a {
 .content-center {
     display: flex; 
     flex-direction: column; 
-    justify-content: center; 
     align-items: center;
     border:none;
 }
+
+
 
 /* Header styles start */
 
 .header {
     width: 100%;
     position: absolute;
-    background-color: none;
     margin-top: 80px;
 }
 
+.header-nav-phone {
+    display: none;
+}
 
 .wrapper {
     max-width: 1690px;
+    width: 100%;
     margin: 0 auto;
 }
+
+
 
 .header-wrapper {
     display: flex;
@@ -80,15 +77,15 @@ a {
     margin-right: 63px;
     list-style-type: none;
 }
+
 .header-item:last-child {
     margin: 0;
 }
 
 .header-link {
-    font-family: Sukhumvit Set;
-    font-style: normal;
+    font-family: 'Sukhumvit Set';
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 24px;
     color: $secondary-color;
     text-decoration: none;
@@ -96,15 +93,15 @@ a {
     @include header-link ($sixth-level-opacity)
 }
 
+
+
+
 /* Header styles End */
 
 /* Intro styles Start */
 
 .main {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+    display: block;
 }
 
 .intro {
@@ -119,27 +116,32 @@ a {
 }
 
 
+
+
 .main-heading {
+    position: relative;
     font-family: 'Saudagar';
-    font-style: normal;
     font-weight: normal;
-    font-size: 13rem;
-    line-height: 60%;
+    font-size: 17.1rem;
+    line-height: 100%;
     text-transform: uppercase;
     color: $secondary-color;
     margin-bottom: 40px;
 }
 
+
+
 .intro-text {
     font-family: 'Sukhumvit Set';
-    font-style: normal;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 2rem;
     line-height: 130%;
     text-transform: uppercase;
     color: $secondary-color;
     margin-bottom: 70px;
 }
+
+
 
 .container {
     display: flex;
@@ -155,9 +157,8 @@ a {
     align-items: center;
 
     font-family: 'Sukhumvit Set';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 700;
+    font-size: 1.1rem;
     line-height: 172%;
 
 
@@ -171,34 +172,32 @@ a {
     height: 59px;
 }
 
+
 /* Intro styles End */
 
 /* Comming soon Start */
+
 .comming-soon-page {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
-    text-align: center;
-    flex-wrap: nowrap;
+    display: block;
     width: 100%;
     background: $third-color;
     -webkit-background-size: cover;
     background-size: cover;
-    height: 100vh;
+    height: 130vh;
 }
 
 .comming-soon-heading {
     font-family: 'Saudagar';
-    font-style: normal;
     font-weight: normal;
-    font-size: 13rem;
-    line-height: 90%;
+    text-align: center;
+    width: 100%;
+    font-size: 14vw;
+    line-height: 100%;
     color: $secondary-color;
     opacity: 0.06;
     text-transform: uppercase;
     margin-bottom: 211px;
-    width: 100%;
+    white-space: pre;
 }
 
 .comming-soon-container {
@@ -206,14 +205,11 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    margin-bottom: 100px;
+    text-align: center;
 }
 
 .comming-soon-heading2 {
     font-family: 'Saudagar';
-    font-style: normal;
-    font-weight: normal;
     max-width: 800px;
     font-size: 3rem;
     text-transform: uppercase;
@@ -223,7 +219,6 @@ a {
 
 .comming-soon-text {
     font-family: 'Sukhumvit Set';
-    font-style: normal;
     font-weight: 300;
     font-size: 1.37rem;
     line-height: 172%;
@@ -234,14 +229,13 @@ a {
 }
 
 .comming-soon-image {
-    width: 1520px;
-    height: 760px;
+    max-width: 1520px;
+    width: 100%;
+    height: auto;
     position: relative;
     transform: translateY(-100px);
-    background: url(../images/comming-soon.jpg);
-    -webkit-background-size: cover;
-    background-size: cover;
     margin-bottom: 300px;
+    object-fit: cover;
 }
 /* Comming soon End */
 
@@ -254,47 +248,68 @@ a {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width: 1320px;
+    max-width: 1320px;
+    width: 100%;
     margin-bottom: 245px;
 }
 
 
 .card-schedule-image {
-    background: url(../images/schedule-image.jpg);
-    background-repeat: no-repeat;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     height: 330px;
 }
 
 .card-primary-text {
     max-width: 580px;
+    width: 100%;
     height: 330px;
     margin-bottom: 100px;
 }
 
-.schedule-heading {
+.heading {
     font-family: 'Saudagar';
-    font-style: normal;
     font-weight: normal;
-    font-size: 30px;
+    font-size: 1.9rem;
     line-height: 150%;
     color: $primary-color;
 }
 
-.schedule-title {
+.card-primary-text:hover {
+    animation-name: skills-animation;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes skills-animation {
+    0% {
+        left: 0px;
+    }
+    100% {
+        margin-left: 100px;
+    }
+}
+
+
+.title {
     font-family: 'Saudagar';
-    font-style: normal;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 3.1rem;
     line-height: 130%;
     text-transform: uppercase;
+    color: $third-color;
+}
+
+.schedule-title {
     margin-bottom: 47px;
 }
-.schedule-text {
+
+
+.text {
     font-family: 'Sukhumvit Set';
-    font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    max-width: 450px;
+    font-size: 1.3rem;
     line-height: 172%;
 }
 
@@ -306,7 +321,7 @@ a {
 .bg-money {
     background:$third-color;
     width: 100%; 
-    height: 690px; 
+    height: 950px;
     display: flex; 
     justify-content: space-around;
     align-items: flex-start;
@@ -315,52 +330,34 @@ a {
 
 .cards-money {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 1320px;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    max-width: 1320px;
+    width: 100%;
     margin-bottom: 245px;
-}
-.card-money-text {
-    max-width: 484px;
-    height: 318px;
-    height: 600px;
 }
 
 .money-heading {
-    font-family: 'Saudagar';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 150%;
-    color: $primary-color;
+    margin-top: 100px;
 }
 .money-title {
-    font-family: 'Saudagar';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 130%;
-    text-transform: uppercase;
-    margin-bottom: 47px;
-    max-width: 390px;
     color: $secondary-color;
+    max-width: 390px;
+    margin-bottom: 47px;
 }
 .money-text {
-    font-family: 'Sukhumvit Set';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 172%;
-    max-width: 484px;
     color: $secondary-color;
 }
 
 .card-money-image {
-    background: url(../images/money-image.jpg);
-    background-repeat: no-repeat;
+    
     width: 580px;
-    height: 1030px;
-    transform: translateY(-80px);
+    height: auto;
+    transform: translateY(-75px);
+}
+
+.card-money-image-mobile{
+    display: none;
 }
 /* Money page End*/
 
@@ -370,72 +367,123 @@ a {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    width: 1520px;
+    max-width: 1520px;
+    width: 100%;
     margin-bottom: 245px;
 }
 
-.skills-heading {
-    font-family: 'Saudagar';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 150%;
-    color: $primary-color;
-}
-
 .skills-title {
-    font-family: 'Saudagar';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 130%;
     text-transform: uppercase;
     max-width: 390px;
     margin-bottom: 47px;
 }
 .skills-text {
-    font-family: 'Sukhumvit Set';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 22px;
-    line-height: 172%;
     max-width: 450px;
 }
 /* Skills personal End */
 
 
-
 /* Circles Start */
 
+
 .circles-wrap {
+    overflow: hidden;
     width: 100%;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin-bottom: 200px;
 }
 
+.circle-animation {
+    background: $primary-color;
+    animation-name: circle-bg;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
 .circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);   
     width: 541px;
     height: 541px;
-    border-radius: 270.5px;
-    background: $primary-color;
+    border-radius: 50%;
+
+   
+    &:first-child {
+        transform: translate3d(-100%, -50%, 0);
+        margin-right: 37px;
+    }
+    &:nth-child(3){
+        transform: translate3d(100%, -50%, 0);
+        margin-left: 37px;
+    }
 }
+
 
 .circle-slice {
     width: 541px;
     height: 541px;
-    background: url(../images/circle-slice.jpg);
-    background-repeat: no-repeat;
+    animation-name: circle-rotate;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
 }
 
+.circle-slice-mobile {
+    display: none;
+}
 
 .phone {
-    position: absolute;
-    transform: translateY(-100px);
+    z-index: 1;
+    margin: 0 auto;
     width: 362px;
     height: 756px;
-    background: url(../images/Phone1.jpg);
+}
+
+.phone-mobile {
+    display: none;
+}
+
+.circle:hover {
+    animation-play-state: paused;
+}
+
+@keyframes circle-rotate {
+    0% {
+        transform: rotate(0deg);
+        
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circle-bg {
+    0%{
+        background: purple;
+    }
+    15% {
+        background: blue;
+    }
+    30% {
+        background: skyblue;
+    }
+    45%{
+        background: yellow;
+    }
+    50%{ border-radius: 0%;}
+    60% {
+        background: orange;
+    }
+    75% {
+        background: red;
+    }
+    100% {
+        background: purple;
+    }
 }
 
 .install-buttons {
@@ -443,14 +491,11 @@ a {
 }
 
 .comming-soon-app {
-    display: flex;
+    text-align: center;
     font-family: 'Sukhumvit Set';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
+    font-size: 1.6rem;
     line-height: 130%;
     text-transform: uppercase;
-    justify-content: center;
 }
 
 .link-app {
@@ -466,9 +511,8 @@ a {
     align-items: center;
 
     font-family: 'Sukhumvit Set';
-    font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 24px;
     color: white;
     
@@ -477,27 +521,19 @@ a {
     background-color: black;
 
     margin-right: 20px;
+    border-radius: 2px;
+}
+.text-button:last-child {
+    margin-right: 0;
 }
 
 .icon-button {
     margin-right: 10px;
 }
-
-
-
-.play-market {
-    width: 182px;
-    height: 52px;
-    background: black;
-}
-
-
 /* Circles End */
 
 
 /* Info Blank Start */
-
-
 .container-sub {
     display: flex;
     flex-direction: row;
@@ -507,7 +543,7 @@ a {
 
 .info-blank1 {
     width: 50%;
-    height: 100vh;
+    height: 1080px;
     background: url(../images/sub-image.jpg);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -522,40 +558,34 @@ a {
     background: $third-color;
 }
 
-.sub {
-    width: 560px;
-    height: 840px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .sub-text {
-    font-family: Saudagar;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 50px;
+    font-family: 'Saudagar';
+    font-weight: 400;
+    margin: 20px;
+    font-size: 3.1rem;
     line-height: 130%;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: $secondary-color;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .button-sub {
-    width: 560px;
+    max-width: 560px;
+    width: 100%;
     height: 59px;
+    margin: 0 auto;
 }
 
 .input-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    display: block;
     border: none;
+
+    max-width: 600px;
+    width: 100%;
 }
 
 .input-field {
-    width: 560px;
+    width: 556px;
     height: 59px;
     margin: 20px;
     background: none;
@@ -563,28 +593,26 @@ a {
     border-left: none;
     border-right: none;
     font-family: 'Sukhumvit Set';
-    font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 165%;
     text-transform: uppercase;
-    color: #8E8E8E;
+    color: $border-color;
 }
 
 .input-field::placeholder {
     font-family: 'Sukhumvit Set';
-    font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 165%;
     text-transform: uppercase;
-    color: #8E8E8E;
+    color: $border-color;
 }
 
 .drop-down {
-    width: 560px;
+    width: 556px;
     height: 59px;
-    border-bottom: 1px solid $secondary-color;
+    border-bottom: 1px solid $border-color;
     margin: 20px;
 }
 .drop-down-text {
@@ -594,12 +622,11 @@ a {
 
     padding-top: 14px;
     font-family: 'Sukhumvit Set';
-    font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 165%;
     text-transform: uppercase;
-    color: #8E8E8E;
+    color: $border-color;
 }
 
 /* Info Blank End */
@@ -609,19 +636,15 @@ a {
 .footer-container {
     width: 100%;
     height: 110px;
-    background: $third-color;
+    background: black;
 }
 
 .footer-text {
     font-family: 'Sukhumvit Set';
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 165%;
     text-align: center;
-    color: #FFFFFF;
-
-
+    color: $secondary-color;
 }
 
 .footer-space {
@@ -633,4 +656,295 @@ a {
     padding: 41px;
 }
 
+.logo-footer {
+    display: block;
+}
+
+.logo-footer-mobile{
+    display:none;
+}
+
 /* Footer End */
+
+@media screen and (max-width: 1200px){
+    .info-blank1 {
+        display: none;
+    }
+    .info-blank2{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+
+    .wrapper{
+        max-width: 768px;
+    }
+    .main-heading {
+        font-size: 100px;
+    }
+    .header-list {
+        padding-left: 0;
+    }
+    .header-item{
+        margin: 0;
+        margin-top: 102px;
+    }
+
+    #comming {
+        padding-left: 0px;
+    }
+
+    .header-item:last-child {
+        margin: 0;
+        margin-top: 102px;
+    }
+    
+    .header-link {
+        padding-left: 15px;
+        font-size: 0.75rem;
+    }
+    
+    .intro-text {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+
+}
+
+@media screen and (max-width: 575px) {
+    .wrapper{
+        max-width: 335px;
+    }
+    .header-logo {
+        width: 98;
+        margin: 0 auto;
+    }
+
+    .header-nav{
+        display: none;
+    }
+    .header-nav-phone {
+        display: block;
+    }
+
+    .comming-soon-page {
+        height: 80vh;
+    }
+
+    .comming-soon-container>p {
+        max-width: 301px;
+        width: 100%;
+    }
+    @keyframes skills-animation {
+        0% {
+            left: 0px;
+        }
+        100% {
+            margin-left: 10px;
+        }
+    }
+    
+
+    .comming-soon-heading {
+        margin-bottom: 50px;
+    }
+
+    .comming-soon-heading2 {
+        font-size: 25px;
+        margin-bottom: 35px;
+    }
+    .comming-soon-text {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .comming-soon-image {
+        margin-bottom: 78px;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column-reverse;
+        max-width: 335px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card-primary-text{
+        height: 145px;
+    }
+
+    .card-schedule-image {
+        height: 183px;
+        margin-bottom: 66px;
+    }
+
+    .heading {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .bg-money{
+        display: block;
+        height: 30vh;
+    }
+
+    .cards-money {
+        display: block;
+    }
+
+    .money-heading {
+        margin-top: 0;
+        padding-top: 50px;
+    }
+
+    .money-text {
+        max-width: 288px;
+        margin-bottom: 50px;
+    }
+
+    .cards-money {
+        display: block;
+        max-width: 335px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .card-money-image {
+        display: none;
+    }
+
+    .card-money-image-mobile {
+        display: block;
+        width: 100%;
+        height: 206px;
+        margin-bottom: 54px;
+    }
+
+    .cards-skills {
+        display: block;
+        max-width: 335px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .skills-title {
+        margin-bottom: 7px;
+    }
+
+    .skills-text {
+        max-width: 300px;
+    }
+
+    .card-primary-text {
+        margin-bottom: 40px;
+    }
+    .phone {
+        display: none;
+    }
+    .phone-mobile {
+        display: block;
+        z-index: 1;
+    }
+
+    .circles-wrap {
+        margin-bottom: 50px;
+    }
+
+    .circle {
+        width: 202px;
+        height: 202px;
+    }
+    .circle-slice {
+        display: none;
+    }
+
+    .circle-slice-mobile {
+        display: block;
+        width: 202px;
+        height: 202px;
+        transform: translateX(-30%);
+    }
+
+    .comming-soon-app {
+        font-size: 12px;
+    }
+    .link-app {
+        margin-top: 14,5px;
+        margin-bottom: 70px;
+    }
+    .text-button {
+        font-size: 12px;
+        line-height: 15,6px;
+
+        width: 158.78px;
+        height: 45.36px;
+
+        margin-right: 17px;
+    }
+    
+    .text-button:last-child{
+        margin-right: 0px;
+    }
+
+    .button-sub {
+        margin-top: 30px;
+        max-width: 335px;
+        width: 100%;
+        margin-bottom: 70px;
+    }
+
+    .input-form {
+        max-width: 335px;
+    }
+
+    .input-field {
+        max-width: 335px;
+        width: 100%;
+    }
+    .sub-text {
+        max-width: 335px;
+        font-size: 25px;
+        line-height: 32,5px;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    .drop-down {
+        width: 335px;
+    }
+
+    .footer-text {
+        font-size: 10px;
+        line-height: 165%;
+    }
+    .footer-container {
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        width: 100%;
+        height: 95px;
+    }
+
+    .footer-space {        
+        width: 100%;
+        padding:20px;
+    }
+
+    .logo-footer {
+        display: none;
+    }
+
+    .logo-footer-mobile {
+        display: block;
+    }
+}
