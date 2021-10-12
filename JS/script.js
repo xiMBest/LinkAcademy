@@ -1,67 +1,49 @@
-// 1 exercise +
-function countTrue() {
-
+// 1 exercise + +
+function countTrue(a) {
     let z = 0;
-    const a = [true, false, true, false, false, false, true, true];
     let len = a.length;
-
     for (let i = 0; i < len; i++) {
         if (a[i] === true){
             z++;
         }
     }
-    alert(z);
+    return z;
 }
-// 1.1 exercise +
-function countFalse() {
+// 1.1 exercise + +
+function countFalse(a) {
     let z = 0;
-    const a = [true, false, true, false, false, false, true, true, false];
-
     for (let i of a) {
         if(i === false){
             z++;
         }
     }
-    alert(z);
+    return z;
 }
-// 2 exercise +
+// 2 exercise + *
 function jazzify() {
-    let a = ["G", "b", "C", "Dm"];
+    
     let z = [];
     if (a != 0){
         for (let i of a){
         z.push(i+="7");
     }
-    alert(z);
+    return z;
     }else{
-        alert("Your arr is empty");
+        return "Your arr is empty";
     }
     
 }
-// 3 exercise +
-function sortDescending() {
-    let x = "129420546";
-    if (x>0) {
-        let arr = Array.from(x);
-    for(let j=0;j<arr.length;j++) {
-        for(let i = 0; i < arr.length; i++) {
-            if(arr[i]<arr[i+1]) {
-                let temp = arr[i];
-                arr[i] = arr[i+1];
-                arr[i+1] = temp;
-            }
-        }
-    }
-    alert(arr);
-    }
-    else {
-        alert("Error your number negative")
-    }
-    
+// 3 exercise + +
+function sortDescending(x) {
+    let intToArr = num =>Number(num);
+    let intArr = Array.from(String(x), intToArr);
+    let arrInt=intArr.sort().reverse();
+    const res = Number(arrInt.join(''));
+    return res;
 }
-// 4 exercise +
+// 4 exercise + +
 function sortByLength() {
-    let x = ["Leonardo", "Michelangelo", "Raphael", "Donatello"]; 
+    let x = ['Leonardo', 'Michelangelo', 'Raphael', 'Donatello'];
     for (let z of x){
         for(let i = 0; i < x.length - 1; i++) {
             if(x[i].length > x[i+1].length) {
@@ -71,11 +53,10 @@ function sortByLength() {
             }
     }
     }
-    alert(x);
+    return x;
 }
-// 5 exercise +
-function minMax() {
-    let x = [12, 4, 6, 2, 51];
+// 5 exercise + +
+function minMax(x) {
     for(let j=0;j<x.length;j++) {
         for(let i = 0; i < x.length; i++) {
             if(x[i]>x[i+1]) {
@@ -85,9 +66,10 @@ function minMax() {
             }
         }
     }
-    alert("min = " + x[0] + ", Max = " + x[x.length - 1]);
+    let res = ([x[0], x[x.length - 1]]);
+    return res;
 }
-// 6 exercise +
+// 6 exercise + +
 function findLargestNums() {
     let x = [[4, 2, 7, 1], [20, 70, 40, 90], [1, 2, 0]];
     let res = [];
@@ -101,166 +83,123 @@ function findLargestNums() {
         }
         res.push(max);
     }
-    alert(res);
+    return res;
 }
-// 7 exercise +
-const calculator = {
-    x: 5,
-    y: 10,
-    z: 0,
-    add: function() {
-        alert(this.z = this.x + this.y);
-    },
-    multiply: function() {
-        alert(this.z = this.x * this.y);
-    },
-    devide: function() {
-        alert(this.z = this.x / this.y);
-    },
-    subtruct: function() {
-        alert(this.z = this.x - this.y);
+// 7 exercise + +
+class Calculator {
+    constructor(a, b) {
+        this.a = a;
+        this.b = b;
     }
-}
-// 8 exercise +
-function keysAndValues() {
-    let x = { a: 2, c: 1, b: 3 };
-    let resKeys = [];
-    let resValues = [];
-    for (let i in x) {
-        resKeys.push(i);
+    get add() {
+        return this.a + this.b;
     }
-    for(let j=0;j<resKeys.length;j++) {
-        for(let i = 0; i < resKeys.length; i++) {
-            if(resKeys[i]>resKeys[i+1]) {
-                let temp = resKeys[i];
-                resKeys[i] = resKeys[i+1];
-                resKeys[i+1] = temp;
-            }
-        }
+    get multiply() {
+        return this.a * this.b;
     }
-    for (let i of resKeys) {
-        resValues.push(x[i]);
+    get divide() {
+        return this.a / this.b;
     }
-    alert(resKeys + " " + resValues);
-}
-// 9 exercise +
-const ascDesNone = {
-    x: x = [3, 4, 6, 1, 5, 7],
-    
-    asc: function (){
-        let xCopy = [];
-        for (let i of x) {
-            xCopy.push(i);
-        }
-        for(let j=0;j<xCopy.length;j++) {
-        for(let i = 0; i < xCopy.length; i++) {
-            if(xCopy[i]>xCopy[i+1]) {
-                let temp = xCopy[i];
-                xCopy[i] = xCopy[i+1];
-                xCopy[i+1] = temp;
-            }
-        }
-        
-    }
-    alert(xCopy);
-    },
-    des: function () {
-        let xCopy = [];
-        for (let i of x) {
-            xCopy.push(i);
-        }
-        for(let j=0;j<xCopy.length;j++) {
-        for(let i = 0; i < xCopy.length; i++) {
-            if(xCopy[i]<xCopy[i+1]) {
-                let temp = xCopy[i];
-                xCopy[i] = xCopy[i+1];
-                xCopy[i+1] = temp;
-            }
-        }
-    }
-    alert(xCopy);
-    },
-    none: function () {
-        alert(x);
+    get subtract() {
+        return this.a - this.b;
     }
 }
-// 10 exercise +
-function sortIt() {
-    let x = [[3], 4, [2], [5], 1, 6];
-    for(let j=0;j<x.length;j++) {
-        for(let i = 0; i < x.length; i++) {
-            if(x[i]>x[i+1]) {
-                let temp = x[i];
-                x[i] = x[i+1];
-                x[i+1] = temp;
-            }
-        }
+// 8 exercise + +
+function keysAndValues(data){
+    let keys = Object.keys(data),
+        values = keys.map(function (key) {
+            return data[key];
+        });
+    return [keys, values];
 }
-alert(x);
-console.log(x);
+// 9 exercise + +
+class AscDesNone {
+    constructor(x) {
+        this.x = x;
+    }
+    get asc(){
+        let xCopy = this.x.sort();
+    return xCopy;
+    }
+    get des(){
+        let xCopy = this.x.sort().reverse();
+    return xCopy;
+    }
+    get none() {
+        return this.x;
+    }
 }
-// 11 exercise *
-function hasHiddenFee(){
-    let x = ["$2", "$4", "$1", "$8"];
-    let sumCheck = "$17";
+// 10 exercise + +
+function sortIt(x) {
+    return x = x.sort();
+}
+// 11 exercise + +
+function hasHiddenFee(x, sumCheck){
     let totalSum = 0;
     let y = /\d+/g;
     for (let i of x) {
         let z = parseInt(i.match(y)[0], 10);
         totalSum+=z;
+        console.log(totalSum);
     }
-    
     if (parseInt(sumCheck.match(y)[0], 10) > totalSum) {
-        alert(true);
-        return;
+        return true;
     }
-    alert(false);
+    return false;
 }
-
-// 12 exercise *
-function trace(){
-    let x = [[7, 6, 3],[2, 3, 4],[3, 4, 5]];
+// 12 exercise * +
+function trace(x){
     let y = [];
-    let j = 0;
+    let sum = 0;
     let arr = [];
-    let res = 0;
-    let reducer = (0, 1);
     for (let j=0; j<x.length; j++) {
         y = x[j];
         arr.push(y[j]);
     }
-    alert(arr.reduce());
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
 }
-
-//13 exercise +
-function removeSpecialCharacters() {
-    let x = "%fd76$fd(-)6GvKlO.";
+//13 exercise + +
+function removeSpecialCharacters(x) {
     let y = /[^.,!,@,#,$,%,^,&,\,*,(,)]/g;
     let res = x.match(y).join("");
-    alert(res);
+    return res;
 }
-//14 exercise
+//14 exercise + +
 function mathExpr(x) {
-    let y = /^\d+ *[+,\-,*,\/]{1} *\d+$/g;
+    let y = /^-*\d+ *[+,\-,*,\/,%]{1} *-*\d+$/g;
     let res = x.match(y)?.length === 1;
     return res;
 }
-
-//15 exercise
+//15 exercise ++
 function pentagonal(n) {
     let res = (5 * Math.pow(n, 2) - 5 * n + 2)/2;
     return res;
 }
-
-//16 exercise
-const tempConversion = {
-    z: z = [1],
-    kel: function (z) {
-        res = z + 273,15;
-        alert(z+ " cel = " + res + " kelvin" )
-    },
-    fah: function(z) {
-        res = z * 9/5 + 32
-        alert(z+ " cel = " + res + " Fahrenheit")
+//16 exercise+ +
+class TempConversion{
+    constructor(z){
+        this.z = z;
     }
+    get tempConversion() {
+        let kel = this.z + 273.15;
+        let fah = this.z * 9/5 + 32;
+        return [fah, kel ];
+    }
+}
+//17 exercise + +
+function missingLetter(str) {
+    let i, j = 0, m = 122;
+    if (str) {
+        i = str.charCodeAt(0);
+        while (i <= m && j < str.length) {
+            if (String.fromCharCode(i) !== str.charAt(j)) {
+                return String.fromCharCode(i);
+            }
+            i++; j++;
+        }
+    }
+    return undefined;
 }
