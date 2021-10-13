@@ -33,6 +33,21 @@ function jazzify(a) {
 }
 return z;
 }
+//2.1 exercise
+function jazzify2(a) {
+    let z = [];
+    let reg = /^[A-G]m?$/g;
+    for (let i of a) {
+        if(i.endsWith("7")){
+            z.push(i);
+        } else if (i = i.match(reg)){
+            z.push(i+="7");
+        }
+    }
+    return z;
+}
+
+
 // 3 exercise + +
 function sortDescending(x) {
     let intToArr = num =>Number(num);
@@ -57,15 +72,7 @@ function sortByLength() {
 }
 // 5 exercise + +
 function minMax(x) {
-    for(let j=0;j<x.length;j++) {
-        for(let i = 0; i < x.length; i++) {
-            if(x[i]>x[i+1]) {
-                let temp = x[i];
-                x[i] = x[i+1];
-                x[i+1] = temp;
-            }
-        }
-    }
+    const sortedArr = x.sort((a, b)=>a-b);
     let res = ([x[0], x[x.length - 1]]);
     return res;
 }
@@ -113,20 +120,15 @@ function keysAndValues(data){
     return [keys, values];
 }
 // 9 exercise + +
-class AscDesNone {
-    constructor(x) {
-        this.x = x;
-    }
-    get asc(){
-        let xCopy = this.x.sort();
-    return xCopy;
-    }
-    get des(){
-        let xCopy = this.x.sort().reverse();
-    return xCopy;
-    }
-    get none() {
-        return this.x;
+function ascDesNone(x, action) {
+    if(action == "asc") {
+        let xCopy = x.sort();
+        return xCopy;
+    } else if (action == "des") {
+        let xCopy = x.sort().reverse();
+        return xCopy;
+    } else if (action == "none") {
+        return x;
     }
 }
 // 10 exercise + +
