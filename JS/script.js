@@ -19,19 +19,19 @@ function countFalse(a) {
     }
     return z;
 }
-// 2 exercise + *
-function jazzify() {
-    
+// 2 exercise + +
+function jazzify(a) {
+    let reg = /^[A-G]m?$/g;
+    let regJazz = /^[A-G]m?7{1}$/g;
     let z = [];
-    if (a != 0){
-        for (let i of a){
-        z.push(i+="7");
-    }
-    return z;
-    }else{
-        return "Your arr is empty";
-    }
-    
+    for (let i of a){
+        if (i.match(reg)){
+            z.push(i+="7");
+        }else if (i.match(regJazz)){
+            z.push(i);
+        }
+}
+return z;
 }
 // 3 exercise + +
 function sortDescending(x) {
