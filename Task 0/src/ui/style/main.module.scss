@@ -1,0 +1,90 @@
+@import '../style/variables';
+
+.main {
+    margin: 0 auto;
+    margin-top: 121px;
+
+    display: flex;
+
+    width: 946px;
+
+    &__posts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__cards {
+        margin-top: 128px;
+    }
+
+    &__hiddenBlock {
+        margin: 0 auto;
+    }
+
+    &__morePost {
+        position: fixed;
+        width: 171px;
+        height: 28px;
+        background: $secondary-color;    
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+    }
+
+    &__morePostBlock {
+        width: 146px;
+        height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__morePostText {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 20px;
+        color: $primary-btn-color;
+        text-decoration: none;
+    }
+
+    &__morePostIcon {
+        margin-right: 12px;
+        margin-bottom: 2px;
+        width: 15px;
+        height: 15px;
+        background: url('../../public/images/cross.svg');
+    }
+}
+
+@media screen and (min-device-width:720px) and (max-device-width: 1024px){
+    .main {
+        width: 560px;
+        
+        &__posts {
+            margin: 0 auto;
+        }
+
+        &__profile {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-device-width:320px) and (max-device-width: 719px) {
+    .main {
+        width: 343px;
+
+        &__posts {
+            margin: 0 auto;
+        }
+
+        &__profile {
+            display: none;
+        }
+    }
+}

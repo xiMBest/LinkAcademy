@@ -1,0 +1,114 @@
+@import './variables';
+
+.header {
+    position: fixed;
+    top:0;
+    z-index: 1;
+
+    height: 88px;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: $secondary-color;
+    box-shadow: $primary-shadow;
+
+    &__logoLink {
+        margin-left: 64px;
+        background: url('../../public/images/logo.svg');
+        background-repeat: no-repeat;
+        z-index: 1;
+        width: 104px;
+        height: 24px;
+    }
+
+    &__navBar {
+        margin-right: 64px;
+        display: flex;
+    }
+
+    &__btn {
+        border: 0.5px solid $border-color;
+        box-sizing: border-box;
+        border-radius: 12px;
+
+        cursor: pointer;
+    }
+
+    &__navBar > &__btn {
+        margin: 16px;
+    }
+
+    &__btnHome {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background: black;
+
+        width: 85px;
+        height: 40px;
+    }
+
+    &__homeText {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+
+        font-size: 12px;
+
+        color: $secondary-color;
+        text-decoration: none;
+    }
+
+    &__btnLang {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+        background: $secondary-color;
+    }
+
+
+    &__langText {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+
+        font-size: 12px;
+
+        color: $primary-color;
+    }
+
+    &__profileImg {
+        width: 40px;
+        height: 40px;
+
+        background:url('../../public/images/headerAva.png');
+    }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 1020px) {
+    .header {
+        height: 64px;
+
+        &__logoLink {
+            margin-left: 16px;
+        }
+        &__navBar {
+            margin-right: 16px;
+        }
+        &__navBar > &__btn {
+            margin: 0;
+        }
+        &__btnHome {
+            display: none;
+        }
+        &__btnLang {
+            display: none;
+        }
+    }
+}

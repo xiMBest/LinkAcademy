@@ -1,0 +1,337 @@
+/* COLORS */
+/* Box Shadows */
+/* Borders */
+/* COLORS */
+/* Box Shadows */
+/* Borders */
+.main {
+  margin: 0 auto;
+  margin-top: 121px;
+  display: flex;
+  width: 946px;
+}
+.main__posts {
+  display: flex;
+  flex-direction: column;
+}
+.main__cards {
+  margin-top: 128px;
+}
+.main__hiddenBlock {
+  margin: 0 auto;
+}
+.main__morePost {
+  position: fixed;
+  width: 171px;
+  height: 28px;
+  background: #ffffff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.main__morePostBlock {
+  width: 146px;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__morePostText {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #0087FF;
+  text-decoration: none;
+}
+.main__morePostIcon {
+  margin-right: 12px;
+  margin-bottom: 2px;
+  width: 15px;
+  height: 15px;
+  background: url("../../public/images/cross.svg");
+}
+
+@media screen and (min-device-width: 720px) and (max-device-width: 1024px) {
+  .main {
+    width: 560px;
+  }
+  .main__posts {
+    margin: 0 auto;
+  }
+  .main__profile {
+    display: none;
+  }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 719px) {
+  .main {
+    width: 343px;
+  }
+  .main__posts {
+    margin: 0 auto;
+  }
+  .main__profile {
+    display: none;
+  }
+}
+/* COLORS */
+/* Box Shadows */
+/* Borders */
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  height: 88px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+}
+.header__logoLink {
+  margin-left: 64px;
+  background: url("../../public/images/logo.svg");
+  background-repeat: no-repeat;
+  z-index: 1;
+  width: 104px;
+  height: 24px;
+}
+.header__navBar {
+  margin-right: 64px;
+  display: flex;
+}
+.header__btn {
+  border: 0.5px solid #C9CAD1;
+  box-sizing: border-box;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.header__navBar > .header__btn {
+  margin: 16px;
+}
+.header__btnHome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  width: 85px;
+  height: 40px;
+}
+.header__homeText {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+.header__btnLang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+}
+.header__langText {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  color: #010101;
+}
+.header__profileImg {
+  width: 40px;
+  height: 40px;
+  background: url("../../public/images/headerAva.png");
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 1020px) {
+  .header {
+    height: 64px;
+  }
+  .header__logoLink {
+    margin-left: 16px;
+  }
+  .header__navBar {
+    margin-right: 16px;
+  }
+  .header__navBar > .header__btn {
+    margin: 0;
+  }
+  .header__btnHome {
+    display: none;
+  }
+  .header__btnLang {
+    display: none;
+  }
+}
+/* COLORS */
+/* Box Shadows */
+/* Borders */
+.card {
+  width: 560px;
+  height: 740px;
+  margin-bottom: 108px;
+}
+.card__header {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.card__ava {
+  display: flex;
+}
+.card__userLogo {
+  width: 40px;
+  height: 40px;
+  background: url("../../public/images/headerAva.png");
+  border: 0.5px solid #C9CAD1;
+  box-sizing: border-box;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.card__infoCreated {
+  margin-left: 16px;
+}
+.card__nameCreator {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #010101;
+  cursor: pointer;
+}
+.card__timeCreated {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #010101;
+  opacity: 0.25;
+}
+.card__settingsPost {
+  background: url("../../public/images/settingsIcon.svg");
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.card__postPic {
+  max-width: 100%;
+  height: 560px;
+  border-radius: 48px;
+}
+.card__contentFrame {
+  margin-top: 20px;
+}
+.card__contentText {
+  margin: 0 auto;
+  max-width: 544px;
+  max-height: 60px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #808080;
+}
+.card__lover {
+  margin-top: 18px;
+  display: flex;
+  justify-content: space-between;
+}
+.card__interactions {
+  display: flex;
+  align-items: center;
+}
+.card__likes {
+  display: flex;
+  align-items: flex-end;
+  margin-right: 48px;
+}
+.card__likesIcon {
+  background: url("../../public/images/likeIcon.svg");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.card__comments {
+  display: flex;
+  align-items: flex-end;
+}
+.card__commentsIcon {
+  background: url("../../public/images/commentIcon.svg");
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+.card__countInteractions {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  margin-left: 10px;
+}
+.card__btnShare {
+  display: flex;
+  width: max-content;
+  height: max-content;
+  text-decoration: none;
+}
+.card__textShare {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #010101;
+}
+.card__iconShare {
+  background: url("../../public/images/shareIcon.svg");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+@media screen and (min-device-width: 720px) and (max-device-width: 1024px) {
+  .card {
+    margin-bottom: 48px;
+  }
+}
+@media screen and (min-device-width: 320px) and (max-device-width: 719px) {
+  .card {
+    width: 343px;
+    height: 527px;
+    margin-bottom: 24px;
+  }
+  .card__header {
+    margin-bottom: 12px;
+  }
+  .card__postPic {
+    height: 343px;
+  }
+  .card__contentFrame {
+    margin-top: 16px;
+  }
+  .card__lover {
+    margin-top: 14px;
+  }
+}
+* {
+  margin: 0;
+}
+
+/*# sourceMappingURL=App.css.map */

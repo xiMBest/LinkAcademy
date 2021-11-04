@@ -1,0 +1,138 @@
+@import './variables';
+
+.profile {
+    &__profileInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-left: 82px;
+    }
+    &__avaProfile {
+        display: flex;
+        text-align: center;
+
+        align-items: center;
+
+        margin-bottom: 23px;
+    }
+    &__avaIcon {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    &__borderAva {
+        width: 88px;
+        height: 88px;
+        padding-top: 2px;
+        background: $border-gradient;
+        border-radius: 24px;
+    }
+    &__bgAva {
+        margin: 0 auto;
+        width: 82px;
+        height: 82px;
+        background: $secondary-color ;
+        border-radius: 20px;
+    }
+
+    &__icon {
+        cursor: pointer;
+        margin: 0 auto;
+        margin-top: 2px;
+        width: 80px;
+        height: 80px;
+        background: url('../../public/images/avaMain.png');
+        border-radius: 20px;
+    }
+
+    &__newStories {
+        margin-left: 31px;
+        margin-top: 70px;
+        position: absolute;
+        width: 20px;
+        height: 20px;
+
+        background: $border-gradient;
+        border-radius: 6px;
+
+        cursor: pointer;
+    }
+
+    &__lineHor {
+        margin: 0 auto;
+        margin-top: 9px;
+        width: 10px;
+        height: 2px;
+        background: $secondary-color;
+    }
+
+    &__lineVer {
+        margin-top: -6px;
+        margin-left: 9px;
+        width: 2px;
+        height: 10px;
+        background: $secondary-color;
+    }
+
+    &__followersCount {
+        margin-bottom: 4px;
+    }
+    &__nickname {
+        text-align: center;
+        margin-bottom: 17px;
+    }
+
+    &__bio {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+        color: $content-color;
+
+        text-align: center;
+
+        margin-bottom: 17px;
+    }
+
+    &__profileBtns button:not(:last-child) {
+        margin-right: 12px;
+        margin-bottom: 32px;
+    }
+    &__editProfile {
+        width: 103px;
+        height: 40px;
+
+        background: $secondary-color;
+        border: none;
+        border-radius: 12px;
+
+        cursor: pointer;
+    }
+    &__newPost {
+        width: 103px;
+        height: 40px;
+
+        background: $primary-btn-color;
+        color: $secondary-color;
+        border: none;
+        border-radius: 12px;
+
+        cursor: pointer;
+    }
+    &__privacyFooter {
+        width: 228px;
+        height: 228px;
+    }
+    &__footerText {
+        text-align: center;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 11px;
+        line-height: 20px;
+
+        color: #C9CAD1;
+    }
+}
