@@ -1,1 +1,0 @@
-export const baseUrl = "https://linkstagram-api.ga/";
