@@ -4,6 +4,7 @@
 /* COLORS */
 /* Box Shadows */
 /* Borders */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .main {
   margin: 0 auto;
   margin-top: 121px;
@@ -19,6 +20,86 @@
 }
 .main__hiddenBlock {
   margin: 0 auto;
+}
+.main__newPost {
+  margin: 0 auto;
+  position: fixed;
+  width: 576px;
+  height: 683px;
+  background: #ffffff;
+  border-radius: 32px;
+  z-index: 200;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main__newPostBlock {
+  width: 481px;
+  height: 590;
+  background: #C9CAD1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.main__choosePhoto {
+  width: 480px;
+  height: 345px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__choosePhotoText {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.main__descriptionBlock {
+  margin-top: 32px;
+  width: 480px;
+  height: 128px;
+}
+.main__descriptionText {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  color: #808080;
+}
+.main__inputChooseFile {
+  display: none;
+}
+.main__descriptionInput {
+  width: 480px;
+  height: 108px;
+  padding: 14px;
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #C9CAD1;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+.main__descriptionInput__descriptionInput::placeholder {
+  margin: 0;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  color: #808080;
+}
+.main__btn {
+  width: 234px;
+  height: 48px;
+  box-sizing: border-box;
+  border-radius: 12px;
 }
 .main__morePost {
   position: fixed;
@@ -49,7 +130,6 @@
   text-decoration: none;
 }
 .main__morePostIcon {
-  margin-right: 12px;
   margin-bottom: 2px;
   width: 15px;
   height: 15px;

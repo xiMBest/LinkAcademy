@@ -1,37 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from '../../style/main.module.scss'
 import Card from "./card";
 import Slider from "./slider"
 import Profile from "./profile";
+import MorePost from "./morePost";
+import NewPost from "./newPost";
+import { useSelector } from "react-redux";
+import { AppState } from "../../../core/store/store";
 
-const Main = () => {
+function Main(): JSX.Element {
 
-    const [show,setShow]=useState(true)
-    
+    const posts = useSelector((state: AppState) => state.posts.posts);
+    useEffect(() => {
+        console.log(posts);
+    }, [posts]);
     return (
         <div className={styles.main}>
             <div className={styles.main__posts}>
-            <div className={styles.main__hiddenBlock}>
-            {
-                show?<div className={styles.main__morePost}>
-                    <div className={styles.main__morePostBlock}>
-                        <a href='/' className={styles.main__morePostText}>New posts available</a>
-                        <a onClick={()=>setShow(false)} className={styles.main__morePostIcon}></a>
-                    </div>
-                </div>:null
-            }
-            </div>
+                <MorePost />
                 <Slider />
                 <div className={styles.main__cards}>
-                    <Card />
-                    <Card />
+                    {posts.map(post => <Card post={post} /> )}
                 </div>
             </div>
             <div className={styles.main__profile}>
                 <Profile />
             </div>
         </div>
-    )
-};
+    );
+}
 
 export default Main

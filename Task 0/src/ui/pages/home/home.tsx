@@ -14,13 +14,9 @@ const HomePage = () => {
       <div>
         <Header />
         <Main />
-
-        
-        <Switch>
             <Route path="/profilePage">
               <ProfilePage />
             </Route>
-        </Switch>
       </div>
     </Router>
   );

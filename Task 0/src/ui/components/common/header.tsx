@@ -1,6 +1,6 @@
 import { link } from 'fs';
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { NavLink, Route, Switch } from 'react-router-dom';
 import ProfilePage from '../../pages/profile/profile';
 import styles from '../../style/header.module.scss';
 
@@ -11,7 +11,7 @@ const Header = () => {
             <div className={styles.header__navBar}>
                 <a href='/' className={styles.header__btn + ' ' + styles.header__btnHome + ' ' + styles.header__homeText}>Home</a>
                 <div className={styles.header__btn + ' ' +styles.header__btnLang}><p className={styles.header__langText}>EN</p></div>
-                <a href='/profilePage' className={styles.header__btn + ' ' + styles.header__profileImg}></a>
+                <NavLink className={styles.header__btn + ' ' + styles.header__profileImg} to='/profilePage'></NavLink>
             </div>
 
         <Switch>
