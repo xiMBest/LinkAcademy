@@ -24,7 +24,7 @@ function Main(): JSX.Element {
                 </div>
             </div>
             <div className={styles.main__profile}>
-                <Profile />
+                <Profile/>
             </div>
         </div>
     );

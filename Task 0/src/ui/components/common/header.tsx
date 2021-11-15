@@ -13,12 +13,6 @@ const Header = () => {
                 <div className={styles.header__btn + ' ' +styles.header__btnLang}><p className={styles.header__langText}>EN</p></div>
                 <NavLink className={styles.header__btn + ' ' + styles.header__profileImg} to='/profilePage'></NavLink>
             </div>
-
-        <Switch>
-          <Route path="/profilePage">
-            <ProfilePage />
-          </Route>
-        </Switch>
         </div>
     )
 };

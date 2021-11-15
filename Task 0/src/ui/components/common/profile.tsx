@@ -1,12 +1,13 @@
 import React from "react";
 import styles from '../../style/profile.module.scss'
 
+
 const Profile = () => {
     return(
         <div className={styles.profile__profileInfo}>
             <div className={styles.profile__avaProfile}>
                 <div className={styles.followersInfo}>
-                    <h3 className={styles.profile__followersCount}>1,1 K</h3>
+                    <h3 className={styles.profile__followersCount}>123K</h3>
                     <p className={styles.profile__textFollowers}>Followers</p>
                 </div>
                 <a className={styles.profile__avaIcon}>
@@ -20,7 +21,7 @@ const Profile = () => {
                     
                 </a>
                 <div className={styles.profile__followersInfo}>
-                    <h3 className={styles.profile__followersCount}>448</h3>
+                    <h3 className={styles.profile__followersCount}>123K</h3>
                     <p className={styles.profile__textFollowing}>Following</p>
                 </div>
             </div>
