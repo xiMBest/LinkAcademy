@@ -21,7 +21,7 @@ const MorePost = () => {
                 {
                     morePost?<div className={styles.main__morePost}>
                         <div className={styles.main__morePostBlock}>
-                            <button onClick={handlBtnClick} className={styles.main__morePostText}>New posts available</button>
+                            <button onClick={handlBtnClick} className={styles.main__morePostText}>New Post Availeble</button>
                             <a onClick={()=>setShow(false)} className={styles.main__morePostIcon}></a>
                         </div>
                     </div>:null

@@ -1,0 +1,82 @@
+@import '../style/variables';
+
+.profilePage {
+    margin: 0 auto;
+    margin-top: 121px;
+
+    max-width: 1076px;
+
+    &__avaBlock {
+        display: flex;
+    }
+
+    &__avaImgBorder {
+        width: 116px;
+        height: 116px;
+        background: $border-gradient;
+        border-radius: 31.6364px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__avaImgBorderBg {
+        width: 108px;
+        height: 108px;
+        background: $secondary-color;
+        border-radius: 26px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__bio {
+        margin-left: 32px;
+    }
+    &__fullNameText {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 20px;
+    }
+    &__jobTitleText {
+        margin-top: 10px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    &__descriptionBio {
+        margin-top: 20px;
+        width: 304px;
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+
+        color: $content-color;
+    }
+
+    &__infoBlock {
+
+    }
+
+    &__propsValue {
+        display: flex;
+    }
+
+    &__propsValue > h2 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 20px;
+        margin-right: 119px;
+        color: $primary-color
+    }
+
+}

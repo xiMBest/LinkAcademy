@@ -1,4 +1,4 @@
-import { GET_POSTS, postsActionTypes } from "../actionTypes/postsAcrionTypes"
+import { GET_POSTS, NEW_POST, postsActionTypes } from "../actionTypes/postsAcrionTypes"
 
 interface IPostState {
   posts: Array<{}>

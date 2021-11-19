@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 import styles from '../../style/profile.module.scss'
 
 
 const Profile = () => {
+
     return(
         <div className={styles.profile__profileInfo}>
             <div className={styles.profile__avaProfile}>
@@ -32,7 +34,7 @@ const Profile = () => {
 Tools - Capture One for Raw</p>
             <div className={styles.profile__profileBtns}>
                 <button className={styles.profile__editProfile}>Edit profile</button>
-                <button className={styles.profile__newPost}>New post</button>
+                <NavLink to='/newPost' ><button className={styles.profile__newPost}>New Post</button></NavLink>
             </div>
             <div className={styles.privacyFooter}>
                 <p className={styles.profile__footerText}>About Help Privacy Terms Locations Language

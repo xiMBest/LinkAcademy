@@ -9,7 +9,7 @@ const Header = () => {
         <div className={styles.header}>
             <a href='/' className={styles.header__logoLink}></a>
             <div className={styles.header__navBar}>
-                <a href='/' className={styles.header__btn + ' ' + styles.header__btnHome + ' ' + styles.header__homeText}>Home</a>
+                <NavLink to='/home' className={styles.header__btn + ' ' + styles.header__btnHome + ' ' + styles.header__homeText}>Home</NavLink>
                 <div className={styles.header__btn + ' ' +styles.header__btnLang}><p className={styles.header__langText}>EN</p></div>
                 <NavLink className={styles.header__btn + ' ' + styles.header__profileImg} to='/profilePage'></NavLink>
             </div>

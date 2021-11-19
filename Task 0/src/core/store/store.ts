@@ -9,7 +9,7 @@ declare global {
 }
 
 export const rootReducer = combineReducers({
-    posts: postsReducer,
+    posts: postsReducer
 });
 
 export type AppState = ReturnType<typeof rootReducer>;
