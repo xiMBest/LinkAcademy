@@ -3,14 +3,14 @@ import { AppState } from '../store';
 import { GET_POSTS, NEW_POST, postsActionTypes } from '../actionTypes/postsAcrionTypes';
 import axios from '../../../api/index';
 
-export const postPosts = () => {
+export const postPosts = (description: string) => {
   return (dispatch: Dispatch<postsActionTypes>, getState: () => AppState ) => {
-    axios.post("/posts")
+    axios.post("/posts", {post: {description}})
     .then((res) => {
       return res.data;
     })
     .then((data) => {
-      dispatch({type: NEW_POST, posts: [...data]});
+      dispatch({type: NEW_POST, posts: [...data, description]});
     })
   }
 }

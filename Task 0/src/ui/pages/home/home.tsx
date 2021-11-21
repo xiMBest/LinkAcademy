@@ -9,6 +9,7 @@ import {
 import { AppState } from '../../../core/store/store';
 import Header from '../../components/common/header';
 import Main from '../../components/common/main';
+import NewPost from '../../components/common/newPost';
 import Profile from '../../components/common/profile';
 import ProfilePage from '../profile/profile';
 
@@ -25,7 +26,9 @@ const HomePage = () => {
     <BrowserRouter>
       <div>
         <Header />
-        <Route path='/home' component={Main} />
+        <Route path='/home'>
+          <Main />
+        </Route>
         <Route path='/profilePage'>
             <ProfilePage post={posts} />
         </Route>

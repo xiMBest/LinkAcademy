@@ -16,12 +16,20 @@ const Main = () => {
         console.log(posts);
     }, [posts]);
 
+    const newpost = useSelector((state: AppState) => state.posts.posts);
+    useEffect(() => {
+        console.log(newpost);
+    }, [newpost]);
+
+
 
     return (
         <div className={styles.main}>
             <div className={styles.main__posts}>
                 <MorePost />
-                <Route path='/newPost' component={NewPost}/>
+                <Route path='/home/newPost'>
+                    <NewPost newpost={newpost} />
+                </Route>
                 <Slider />
                 <div className={styles.main__cards}>
                     {posts.map(post => <Card post={post} /> )}
