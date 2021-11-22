@@ -1,0 +1,210 @@
+@import './variables';
+
+
+.card {
+    width: 560px;
+    height: 740px;
+
+    margin-bottom: 108px;
+
+    &__header {
+        width: 100%;
+        height: 40px;
+
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 16px;
+    }
+
+    &__navLink {
+        text-decoration: none;
+    }
+
+    &__ava {
+        display: flex;
+    }
+
+    &__userLogo {
+        width: 40px;
+        height: 40px;
+        background: url('../../public/images/headerAva.png');
+        border: 0.5px solid $border-color;
+
+        box-sizing: border-box;
+        border-radius: 12px;
+
+        cursor: pointer;
+    }
+
+    &__infoCreated {
+        margin-left: 16px;
+    }
+
+
+    &__nameCreator {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: $primary-color;
+        
+        cursor: pointer;
+    }
+
+    &__timeCreated {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 20px;
+
+        color: $primary-color;
+        opacity: 0.25;
+    }
+
+    &__settingsPost {
+        background: url('../../public/images/settingsIcon.svg');
+        background-repeat: no-repeat;
+
+        height: 40px;
+        width: 40px;
+
+        cursor: pointer;
+    }
+
+    
+    &__postPic {
+        max-width: 100%;
+        height: 560px;
+        border-radius: 48px;
+    }
+
+    &__contentFrame {
+        margin-top: 20px;
+    }
+
+
+    &__contentText {
+        margin: 0 auto;
+
+        max-width: 544px;
+        max-height: 60px;
+
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 20px;
+
+        color: $content-color;
+    }
+
+    &__lover {
+        margin-top: 18px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__interactions {
+        display: flex;
+        align-items: center;
+    }
+
+    &__likes {
+        display: flex;
+        align-items: flex-end;
+        margin-right: 48px;
+    }
+
+    &__likesIcon {
+        background: url('../../public/images/likeIcon.svg');
+        background-repeat: no-repeat;
+
+        width: 22px;
+        height: 22px;
+
+        cursor: pointer;
+    }
+
+
+    &__comments {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__commentsIcon {
+        background: url('../../public/images/commentIcon.svg');
+        background-repeat: no-repeat;
+        
+        width: 22px;
+        height: 22px;
+
+        cursor: pointer;
+    }
+
+    
+    &__countInteractions {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+
+        margin-left: 10px;
+    }
+
+
+    &__btnShare {
+        display: flex;
+        width: max-content;
+        height: max-content;
+        text-decoration: none;
+    }
+
+    &__textShare {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        color: $primary-color;
+    }
+
+    &__iconShare {
+        background: url('../../public/images/shareIcon.svg');
+        background-repeat: no-repeat;
+
+        width: 24px;
+        height: 24px;
+        margin-left: 10px;
+    }
+}
+
+@media screen and (min-device-width:720px) and (max-device-width: 1024px) {
+    .card {
+        margin-bottom: 48px;
+    }
+}
+
+
+@media screen and (min-device-width:320px) and (max-device-width: 719px) {
+    .card {
+        width: 343px;
+        height: 527px;
+        margin-bottom: 24px;
+        &__header {
+            margin-bottom: 12px;
+        }
+        &__postPic {
+            height: 343px;
+        }
+        &__contentFrame {
+            margin-top: 16px;
+        }
+        &__lover {
+            margin-top: 14px;
+        }
+
+    }
+}
